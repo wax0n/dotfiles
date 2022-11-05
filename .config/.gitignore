@@ -1,0 +1,9 @@
+# ignore all
+/*
+
+# Excepts
+!.gitignore
+!i3
+!kitty
+!polybar
+!rofi
