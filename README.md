@@ -1,5 +1,7 @@
 # Dotfiles i3
 
+![i3](.config/.screenshots/desktop.png)
+
 ***Dependencies***
 - i3
 - polybar
