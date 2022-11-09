@@ -1,11 +1,13 @@
 #!/bin/bash
 
-CURRENT_TEMP=$(($(cat ./redata)))
+datafile="$HOME/.config/polybar/redshift/redata"
+
+CURRENT_TEMP=$(($(cat $datafile)))
 
 temp() {
   if [ $CURRENT_TEMP -lt 12000 ] ; then
     redshift -O 4000 $> /dev/null
-    echo "$(($CURRENT_TEMP + 4000))" > ./redata
+    echo "$(($CURRENT_TEMP + 4000))" > $datafile 
   else
     remove_temp
   fi
@@ -13,7 +15,7 @@ temp() {
 
 remove_temp() {
   redshift -x $> /dev/null
-  echo '0' > ./redata
+  echo '0' > $datafile 
 }
 
 while [ $# -gt 0 ] ; do
@@ -35,7 +37,7 @@ while [ $# -gt 0 ] ; do
   esac
 done
 
-PRINT_TEMP=$((($(($(cat ./redata))) * 100)/12000))
+PRINT_TEMP=$((($(($(cat $datafile))) * 100)/12000))
 
 if [ $PRINT_TEMP = '0' ] ; then
   echo 'off'
