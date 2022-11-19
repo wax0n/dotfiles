@@ -41,10 +41,10 @@ bindsym $mod+m exec rofi -show drun
 bindsym $mod+Shift+m exec rofi -show
 
 # screenshots
-bindsym --release Shift+Print exec --no-startup-id /home/waxon/Desktop/scripts/scrinshot -c -r $HOME/Pictures/screenshots/
-bindsym --release Control+Shift+Print exec --no-startup-id /home/waxon/Desktop/scripts/scrinshot -r $HOME/Pictures/screenshots/
-bindsym --release Print exec --no-startup-id /home/waxon/Desktop/scripts/scrinshot -c $HOME/Pictures/screenshots/
-bindsym --release Control+Print exec --no-startup-id /home/waxon/Desktop/scripts/scrinshot $HOME/Pictures/screenshots/
+bindsym --release Shift+Print exec --no-startup-id $HOME/.config/.scripts/scrinshot -c -r $HOME/Pictures/screenshots/
+bindsym --release Control+Shift+Print exec --no-startup-id $HOME/.config/.scripts/scrinshot -r $HOME/Pictures/screenshots/
+bindsym --release Print exec --no-startup-id $HOME/.config/.scripts/scrinshot -c $HOME/Pictures/screenshots/
+bindsym --release Control+Print exec --no-startup-id $HOME/.config/.scripts/scrinshot $HOME/Pictures/screenshots/
 
 # start dmenu (a program launcher)
 #bindsym $mod+d exec --no-startup-id dmenu_run
